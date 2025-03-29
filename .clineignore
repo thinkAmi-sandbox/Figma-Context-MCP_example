@@ -1,0 +1,11 @@
+node_modules/
+**/node_modules/
+.devcontainer/
+# package-lock.json
+# package.json
+README.md
+.env
+CUSTOM_INSTRUCTION.md
+
+figma-mcp-example/
+memory-bank-claude/

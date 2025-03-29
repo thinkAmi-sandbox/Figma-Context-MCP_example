@@ -1,0 +1,8 @@
+{
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "@tanstack/react-router": "1.114.29"
+  }
+}
