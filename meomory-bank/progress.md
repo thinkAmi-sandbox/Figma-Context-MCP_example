@@ -1,100 +1,23 @@
-# Current Status
+# Progress - 2025-03-29
 
 ## What Works
-
-- Project setup with Vite and React
-- Figma API integration via MCP server
-- Figma data retrieval
-- SVG icons downloaded from Figma
-- Component structure created
-- Styling applied based on Figma design
-- Navigation between screens implemented
-- Application successfully running in development mode
+- Basic React components (`Button`, `IconButton`, `AppBar`) created and styled based on Figma data.
+- `LoginScreen` component created and styled based on Figma data.
+- `MainScreen` component skeleton created with basic layout styles.
+- SVG icons downloaded and integrated into `AppBar` using `<img>` tags.
+- Simple screen switching between `LoginScreen` and `MainScreen` implemented in `App.tsx` using `useState`. Clicking the login button now correctly switches to the `MainScreen`.
+- Vite development server runs and displays the application correctly after restart (resolved HMR issue).
 
 ## What's Left to Build
+- Apply detailed styles and add content to `MainScreen.tsx` based on Figma data or further requirements.
+- Implement actual login logic (currently simulates success on button click).
+- Potentially revisit routing implementation later if needed and if the SVG conflict can be resolved.
 
-1. Component Structure
-   - [x] Create directory structure for components
-   - [x] Create Button component
-   - [x] Create IconButton component
-   - [x] Create AppBar component
-   - [x] Create LoginScreen component
-   - [x] Create MainScreen component
-
-2. Styling
-   - [x] Extract theme information from Figma
-   - [x] Create theme.ts file
-   - [x] Apply styles to components
-
-3. Integration
-   - [x] Update App.tsx to use the new components
-   - [x] Implement navigation between screens
-
-4. Future Enhancements
-   - [ ] Add more content to the main screen
-   - [ ] Implement form validation
-   - [ ] Add proper routing if needed
-   - [ ] Add more functionality based on user requirements
+## Current Status
+- Core components and basic screen structure with styling are complete.
+- Simple login simulation and screen switching are functional and confirmed working.
+- Application is stable.
 
 ## Known Issues
-
-- None at this time
-
-## Implementation Plan (Completed)
-
-```mermaid
-flowchart TD
-    A[Reactコンポーネント構造の設計] --> B[スタイルの適用]
-    B --> C[コンポーネントの実装]
-    C --> D[Appコンポーネントの更新]
-    D --> E[動作確認]
-    E --> F[完了]
-    style F fill:#8f8,stroke:#484,stroke-width:2px
-```
-
-### Component Structure (Implemented)
-
-```mermaid
-flowchart TD
-    App[App.tsx] --> Login[LoginScreen.tsx]
-    App --> Main[MainScreen.tsx]
-    
-    Login --> Button[Button.tsx]
-    Main --> AppBar[AppBar.tsx]
-    AppBar --> IconButton[IconButton.tsx]
-    
-    style App fill:#8f8,stroke:#484,stroke-width:2px
-    style Login fill:#8f8,stroke:#484,stroke-width:2px
-    style Main fill:#8f8,stroke:#484,stroke-width:2px
-    style Button fill:#8f8,stroke:#484,stroke-width:2px
-    style AppBar fill:#8f8,stroke:#484,stroke-width:2px
-    style IconButton fill:#8f8,stroke:#484,stroke-width:2px
-```
-
-### Project Structure
-
-```
-figma-mcp-example/
-├── src/
-│   ├── assets/
-│   │   ├── icons/
-│   │   │   ├── menu-icon.svg
-│   │   │   └── action-icon.svg
-│   │   └── react.svg
-│   ├── components/
-│   │   ├── AppBar.tsx
-│   │   ├── Button.tsx
-│   │   └── IconButton.tsx
-│   ├── screens/
-│   │   ├── LoginScreen.tsx
-│   │   └── MainScreen.tsx
-│   ├── styles/
-│   │   └── theme.ts
-│   ├── types/
-│   │   └── svg.d.ts
-│   ├── App.css
-│   ├── App.tsx
-│   ├── index.css
-│   ├── main.tsx
-│   └── vite-env.d.ts
-```
+- TanStack Router plugin (`@tanstack/router-vite-plugin`) caused conflicts with SVG loading. Routing implementation was reverted. Unused route files remain in `src/routes` due to deletion restrictions.
+- Screen switching initially failed due to a likely Vite HMR issue, resolved by restarting the dev server.

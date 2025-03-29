@@ -1,37 +1,27 @@
-# Current Work Focus
-
-We have successfully implemented a React application based on a Figma design. The application includes:
-
-1. A login screen with a "Hello World!" text and a login button
-2. An AppBar component with a menu icon, title, and action icon
-3. A main screen with the AppBar and placeholder content
+# Active Context - 2025-03-29
 
 ## Recent Changes
+- Fetched Figma data for node `8608:13648`.
+- Downloaded SVG icons (`menu-icon.svg`, `action-icon.svg`).
+- Created and styled basic React components (`Button`, `IconButton`, `AppBar`, `LoginScreen`).
+- Created `MainScreen` skeleton and applied basic layout styles.
+- Added SVG type definitions to `vite-env.d.ts`.
+- Attempted TanStack Router implementation (`main.tsx`, `vite.config.ts`, `src/routes/*`).
+- Encountered SVG loading errors likely due to router plugin conflict.
+- Reverted TanStack Router implementation (`main.tsx`, `vite.config.ts`).
+- Commented out unused route file (`src/routes/login.tsx`) to resolve errors (deletion restricted). Route files in `src/routes` are currently unused.
+- Implemented screen switching in `App.tsx` using `useState` to toggle between `LoginScreen` and `MainScreen`.
+- Updated `LoginScreen` to accept and call `onLoginSuccess` prop.
+- Fixed related TypeScript errors.
+- Ran Biome formatter on modified files.
+- **Debugged screen switching issue:** Confirmed code was correct; issue resolved by restarting the Vite development server (likely an HMR problem). Screen switching now works as expected.
 
-- Retrieved Figma data using the MCP server
-- Downloaded SVG icons from the Figma file
-- Created component structure:
-  - Basic components: Button, IconButton
-  - Composite components: AppBar
-  - Screen components: LoginScreen, MainScreen
-- Extracted and applied styles from the Figma design:
-  - Colors
-  - Typography
-  - Layout
-  - Effects (shadows)
-- Updated the App component to display the screens with navigation between them
-- Successfully tested the application with Vite development server
+## Current Focus
+- Completed initial implementation and styling of core components, Login Screen, and basic Main Screen layout.
+- Implemented and confirmed working simple state-based screen switching between Login and Main screens.
 
 ## Next Steps
-
-1. Enhance the main screen with more content based on Figma designs
-2. Add more functionality to the application
-3. Implement proper routing if needed
-4. Add form validation for the login screen
-
-## Active Decisions
-
-- Used inline styles instead of CSS Modules for simplicity
-- Used Flexbox for layout based on Figma's layout properties
-- Created a theme file to centralize style information from Figma
-- Implemented a simple state-based navigation between screens
+- Add more content and specific styling to `MainScreen.tsx` based on further Figma details or user requirements.
+- Implement actual login logic.
+- Update `progress.md`.
+- Await further instructions from the user.
