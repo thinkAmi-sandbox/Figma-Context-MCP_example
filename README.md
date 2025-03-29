@@ -19,3 +19,5 @@ https://github.com/GLips/Figma-Context-MCP
 
 
 ## Related Blog (Written in Japanese)
+
+- [Cline + Figma-Context-MCP にて、Figmaのデザインを元にReactアプリを作ってみた - メモ的な思考的な](https://thinkami.hatenablog.com/entry/2025/03/29/225400)
